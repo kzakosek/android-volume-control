@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VolumeControl">
+        <attr name="bar_color_foreground" format="color"/>
+        <attr name="bar_color_background" format="color"/>
+        <attr name="bar_initial_value" format="integer"/>
+        <attr name="bar_num_divisions" format="integer"/>
+        <attr name="bar_height" format="dimension"/>
+        <attr name="bar_spacing" format="dimension"/>
+        <attr name="bar_orientation" format="integer"/>
+        <attr name="current_volume" format="integer"/>
+        <attr name="current_volume_percentage" format="integer"/>
+    </declare-styleable>
+</resources>

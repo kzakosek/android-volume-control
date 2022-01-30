@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VolumeControl</string>
+    <string name="volume_hint">Volume</string>
+    <string name="btn_volume">SET VOLUME</string>
+    <string name="lines_hint">Lines</string>
+    <string name="btn_lines">SET LINES</string>
+    <string name="cb_method">On(swipe)/Off(drag)</string>
+</resources>
