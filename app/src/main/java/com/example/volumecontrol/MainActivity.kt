@@ -84,6 +84,8 @@ class MainActivity : AppCompatActivity() {
                     volumeControl.invalidate ()
 
                     textVolume.text = nextVolume.toString()
+                    val result : String = "Volume set at : " + nextVolume.toString() + "%"
+                    textCurrentVolume.text = result
                 }
                 override fun onSwipeBottom(increase : Int) {
                     val currentPercentage = volumeControl.getVolumePercentage()
@@ -100,45 +102,8 @@ class MainActivity : AppCompatActivity() {
                     volumeControl.invalidate ()
 
                     textVolume.text = nextVolume.toString()
-                }
-            })
-        }else{
-            volumeControl.setOnTouchListener(object : VolumeControl.DragListener(applicationContext){
-                override fun onDragStart(){
-                    //var c = volumeControl.getVolumePercentage()
-                    //Log.d("CURRENT", c.toString())
-                }
-                override fun onDragTop(increase : Int){
-                    val currentPercentage = volumeControl.getVolumePercentage()
-                    var nextVolume : Int = currentPercentage + increase
-
-                    if(nextVolume > 100){
-                        nextVolume = 100
-                    }
-
-                    volumeControl.setVolumePercentage(nextVolume)
-                    volumeControl.setVolume(nextVolume)
-
-                    volumeControl.setCurrentBarValue(nextVolume.toDouble()/100)
-                    volumeControl.invalidate ()
-
-                    textVolume.text = nextVolume.toString()
-                }
-                override fun onDragBottom(increase : Int){
-                    val currentPercentage = volumeControl.getVolumePercentage()
-                    var nextVolume : Int = currentPercentage - increase
-
-                    if(nextVolume < 0){
-                        nextVolume = 0
-                    }
-
-                    volumeControl.setVolumePercentage(nextVolume)
-                    volumeControl.setVolume(nextVolume)
-
-                    volumeControl.setCurrentBarValue(nextVolume.toDouble()/100)
-                    volumeControl.invalidate ()
-
-                    textVolume.text = nextVolume.toString()
+                    val result : String = "Volume set at : " + nextVolume.toString() + "%"
+                    textCurrentVolume.text = result
                 }
             })
         }
@@ -162,6 +127,8 @@ class MainActivity : AppCompatActivity() {
                         volumeControl.invalidate ()
 
                         textVolume.text = nextVolume.toString()
+                        val result : String = "Volume set at : " + nextVolume.toString() + "%"
+                        textCurrentVolume.text = result
                     }
                     override fun onSwipeBottom(increase : Int) {
                         val currentPercentage = volumeControl.getVolumePercentage()
@@ -178,6 +145,8 @@ class MainActivity : AppCompatActivity() {
                         volumeControl.invalidate ()
 
                         textVolume.text = nextVolume.toString()
+                        val result : String = "Volume set at : " + nextVolume.toString() + "%"
+                        textCurrentVolume.text = result
                     }
                 })
             }else{
@@ -201,6 +170,8 @@ class MainActivity : AppCompatActivity() {
                         volumeControl.invalidate ()
 
                         textVolume.text = nextVolume.toString()
+                        val result : String = "Volume set at : " + nextVolume.toString() + "%"
+                        textCurrentVolume.text = result
                     }
                     override fun onDragBottom(increase : Int){
                         val currentPercentage = volumeControl.getVolumePercentage()
@@ -217,6 +188,8 @@ class MainActivity : AppCompatActivity() {
                         volumeControl.invalidate ()
 
                         textVolume.text = nextVolume.toString()
+                        val result : String = "Volume set at : " + nextVolume.toString() + "%"
+                        textCurrentVolume.text = result
                     }
                 })
             }
